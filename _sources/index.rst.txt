@@ -1,0 +1,45 @@
+
+Welcome to LLoyd's documentation!
+=================================
+
+
+.. toctree::
+   :maxdepth: 10
+   :caption: Architecture:
+   
+   Target_Architecture
+
+.. toctree::
+   :maxdepth: 10
+   :caption: Integration:
+   
+   continuous_integration
+   manipulation
+
+.. toctree::
+   :maxdepth: 10
+   :caption: coding:
+   
+   calculator
+   home
+
+.. toctree::
+   :maxdepth: 10
+   :caption: prod:
+   
+   Target_Architecture
+   unit
+
+.. toctree::
+   :maxdepth: 10
+   :caption: test:
+   
+   test
+   test_continuous
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

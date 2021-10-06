@@ -1,0 +1,1 @@
+.. mdinclude:: ../docs/production/Target_Architecture.md
