@@ -1,0 +1,57 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build_sphinx_job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GIT_SECRET  }} 
+
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GIT_SECRET  }}
+      
+    - name: sphinx-build HTML
+      run: |
+        docker run --rm \
+        -v ${{ github.workspace }}:/sphinxneeds \
+        ghcr.io/sndas1903/sphinx/sphinxneeds:latest make html
+
+    - name: Checkout gh_pages branch
+      run: |
+        git checkout gh_pages && \
+        git pull origin gh_pages
+
+    - name: Clean up and structure gh_pages branch
+      run: |
+        ls | grep -v _build | xargs -r sudo rm -r && \
+        sudo mv _build/html/* . && sudo rm -rf _build
+
+    - name: publish to github pages branch
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "sndas1903@github.com"
+        git add .
+        if $(git diff --quiet --cached) ; then
+          echo "No doc changes"
+        else
+          git commit -m "New pages version $(date)"
+          git push origin gh_pages
+        fi
