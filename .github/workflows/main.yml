@@ -30,6 +30,7 @@ jobs:
       
     - name: sphinx-build HTML
       run: |
+        pwd && \
         docker run --rm \
         -v ${{ github.workspace }}:/sphinxneeds \
         ghcr.io/sndas1903/sphinx/sphinxneeds:latest make html
