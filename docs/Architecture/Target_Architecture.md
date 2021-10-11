@@ -2,4 +2,4 @@
 
 ## Non Functional Requirements Details
 
-![test.png](../test.png)
+![test.png](../../../../test.png)
