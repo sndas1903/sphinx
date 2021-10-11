@@ -2,4 +2,4 @@
 
 ## Non Functional Requirements Details
 
-![test.png](./assets/test.png)
+![test.png](../assets/test.png)
