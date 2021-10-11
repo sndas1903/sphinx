@@ -34,12 +34,12 @@ jobs:
         -v ${{ github.workspace }}:/sphinxneeds \
         ghcr.io/sndas1903/sphinx/sphinxneeds:latest make html
 
-    - name: Checkout gh_pages branch
+    - name: Checkout gh-pages branch
       run: |
-        git checkout gh_pages && \
-        git pull origin gh_pages
+        git checkout gh-pages && \
+        git pull origin gh-pages
 
-    - name: Clean up and structure gh_pages branch
+    - name: Clean up and structure gh-pages branch
       run: |
         ls | grep -v _build | xargs -r sudo rm -r && \
         sudo mv _build/html/* . && sudo rm -rf _build
