@@ -11,6 +11,8 @@ import subprocess
 import shutil
 
 sys.path.append(os.path.abspath("."))
+sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('../../docs'))
 
 # General information about the project.
 project = 'Test project'
