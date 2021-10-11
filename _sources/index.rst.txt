@@ -1,45 +1,15 @@
-
-Welcome to LLoyd's documentation!
-=================================
-
-
-.. toctree::
-   :maxdepth: 10
-   :caption: Architecture:
-   
-   Target_Architecture
+===============================================
+Software Defined Car OPS Documentation
+===============================================
 
 .. toctree::
-   :maxdepth: 10
-   :caption: Integration:
-   
-   continuous_integration
-   manipulation
+   :maxdepth: 2
+   :caption: Introduction
+
+   README.md
 
 .. toctree::
-   :maxdepth: 10
-   :caption: coding:
-   
-   calculator
-   home
+   :maxdepth: 2
+   :caption: Target Architecture
 
-.. toctree::
-   :maxdepth: 10
-   :caption: prod:
-   
-   Target_Architecture
-   unit
-
-.. toctree::
-   :maxdepth: 10
-   :caption: test:
-   
-   test
-   test_continuous
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   docs/Architecture/Target_Architecture.md

@@ -1,1 +1,0 @@
-.. mdinclude:: ../docs/Integration/continuous_integration.md

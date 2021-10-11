@@ -1,1 +1,0 @@
-.. mdinclude:: ../docs/Integration/manipulation.md
