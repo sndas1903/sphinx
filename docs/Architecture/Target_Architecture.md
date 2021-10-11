@@ -1,21 +1,21 @@
-## Continuous Integration
+# Continuous Integration
 1. [General Info](#general-info)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
-### General Info
+## General Info
 ***
 Write down general information about your project. It is a good idea to always put a project status in the readme file. This is where you can add it. 
 ### Screenshot
 ![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-### Technologies
+## Technologies
 ***
 A list of technologies used within the project:
 * [Technology name](https://example.com): Version 12.3 
 * [Technology name](https://example.com): Version 2.34
 * [Library name](https://example.com): Version 1234
-### Installation
+## Installation
 ***
 A little intro about the installation. 
 ```
@@ -26,14 +26,14 @@ $ npm start
 ```
 Side information: To use the application in a special environment use ```lorem ipsum``` to start
 
-### Collaboration
+## Collaboration
 ***
 Give instructions on how to collaborate with your project.
 > Maybe you want to write a quote in this part. 
 > Should it encompass several lines?
 > This is how you do it.
 
-### FAQs
+## FAQs
 ***
 A list of frequently asked questions
 1. **This is a question in bold**
