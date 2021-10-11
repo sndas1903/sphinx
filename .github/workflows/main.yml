@@ -53,5 +53,5 @@ jobs:
           echo "No doc changes"
         else
           git commit -m "New pages version $(date)"
-          git push origin gh_pages
+          git push origin gh-pages
         fi
