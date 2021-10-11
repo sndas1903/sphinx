@@ -1,0 +1,37 @@
+@startuml os_style
+skinparam BackgroundColor White
+skinparam ArrowColor Black
+
+skinparam package {
+    StereotypeFontColor<<Example>> Red
+    StereotypeFontStyle Bold Italic
+}
+
+skinparam interface {
+    ' All interfaces
+    borderColor Black
+}
+
+skinparam node {
+    BackgroundColor<<Device>> LightGray
+    BackgroundColor<<Container>> LightBlue
+    BackgroundColor<<OperatingSystem>> SlateGray
+}
+
+skinparam component {
+    ' All components
+    BorderColor Black
+    BackgroundColor WhiteSmoke
+
+    ' Component Stereotypes
+    BackgroundColor<<Subsystem>> LightCyan
+    BackgroundColor<<System>> LightCyan
+
+    BackgroundColor<<VehicleApp>> Wheat
+    BackgroundColor<<ServiceAdapter>> Orange
+
+    BackgroundColor<<VehicleService>> DarkSeaGreen
+
+}
+
+@enduml

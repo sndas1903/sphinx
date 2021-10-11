@@ -1,0 +1,1 @@
+sphinx-build . -W -b linkcheck -d _build/doctrees _build/html

@@ -1,6 +1,6 @@
 ﻿# Sphinx Example for Documentation
 
-A simple example using Sphinx to robert bosch realted project documentation.Normally Sphinx used reStructured Text(.rst) file to render the documentation . So if we have previously craeted .md file that we can include into .rst file to render in a automate way.
+A simple example using Sphinx to test realted project documentation.Normally Sphinx used reStructured Text(.rst) file to render the documentation . So if we have previously craeted .md file that we can include into .rst file to render in a automate way.
 
 ## Local Installation
 
