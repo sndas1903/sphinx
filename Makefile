@@ -1,12 +1,10 @@
-# Minimal makefile for Sphinx documentation
-#
-
-# You can set these variables from the command line, and also
-# from the environment for the first two.
-SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = sphinx
-BUILDDIR      = build
+SPHINXOPTS    =
+SPHINXBUILD   = sphinx-build
+SPHINXPROJ    = sphinx
+SOURCEDIR     = .
+BUILDDIR      = _build
+BREATHEBUILD  = breathe-apidoc
+DOXYGENBUILD  = doxygen
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -14,7 +12,15 @@ help:
 
 .PHONY: help Makefile
 
+clean:
+	rm -rf $(SOURCEDIR)/doxygen/
+	rm -rf $(SOURCEDIR)/_breathe/
+	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+#	@$(DOXYGENBUILD) $(SOURCEDIR)/design/longitudinal_emergency.dox
+#	@$(BREATHEBUILD) -o "$(SOURCEDIR)/_breathe" -f -g class -m -p longitudinal_emergency "$(SOURCEDIR)/_doxygen/xml/"
+	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" '-W' '--keep-going' $(SPHINXOPTS) $(O)

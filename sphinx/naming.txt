@@ -1,1 +1,0 @@
-production=prod,testing=test
