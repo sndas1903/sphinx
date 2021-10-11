@@ -18,8 +18,7 @@ Software Defined Car OPS Documentation
    :maxdepth: 2
    :caption: Integration
 
-   docs/Integration/manipulation.md
-   docs/Integration/manipulation.md
+   docs/Integration/continuous_integration.md
 
 .. toctree::
    :maxdepth: 2
